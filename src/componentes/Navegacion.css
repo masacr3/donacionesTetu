@@ -1,0 +1,97 @@
+.menu {
+    display: flex;
+    background-color: #e6e6fa;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 500px;
+    min-width: 320px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border-top: 1px solid #79647557;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra discreta en el borde superior */
+  }
+  
+  .menu-item {
+    position: relative; /* Necesario para posicionar el tooltip */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-radius 0.3s;
+  }
+  
+  .menu-item img {
+    width: 42px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: 42px;
+  }
+  
+  .menu-item.selected {
+    border-radius: 50%;
+    border: 1px solid #527652;
+  }
+  
+  .menu-item:hover::after {
+    content: attr(data-text); /* Mostrar el texto */
+    position: absolute;
+    bottom: -25px; /* Posición del texto */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(211, 211, 211, 0.46);
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s; /* Transición suave */
+  }
+  
+  .menu-item:hover::after {
+    opacity: 1; /* Mostrar al pasar el cursor */
+  }
+  
+  .menu-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #79647557;
+    margin: 0 10px;
+    color: #333;
+  }
+
+  @media (max-width: 320px) {
+    .menu {
+      padding: 5px 0; /* Reduce el espaciado interno */
+      justify-content: space-between; /* Ajusta la distribución de los íconos */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    .box.cbu{
+      background-color: #fae6e6;
+      padding: 10px;
+      border-radius: 16px;
+      font-size: 12px;
+    }
+
+    .cbu button{
+      background-color: #fae6e6;
+      height: 30px;
+      border:none;
+      border-radius: 8px;
+    }
+
+    .bton-cbu{
+      background-color: #fae6e6;
+      height: 50px;
+      border:none;
+      border: 1px solid #d8bfd8;
+      border-radius: 8px;
+    }
+  }

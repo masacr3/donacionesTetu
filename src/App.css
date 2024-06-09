@@ -1,0 +1,108 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 90px;
+}
+
+.card ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li{
+    margin-bottom: 6px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    border: 1px solid #79647557;
+    
+}
+
+.box span{
+    margin-right: 16px;
+}
+
+.gvr {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+  }
+
+.lora{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fs-12{
+    font-size: 12px;
+}
+
+
+.cbu-center{
+    margin: 0;
+    height:70vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.box.cbu{
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #fae6e6;
+    margin-bottom: 6px;
+}
+
+.row{
+    border-bottom: 1px solid #d8bfd8;
+    padding-top: 10px;
+    padding-bottom: 16px;
+}
+
+.row.off{
+    border-bottom: none;
+    text-align: center;
+    padding-top: 16px;
+}
+
+.box.cbu.off{
+    background-color: transparent;
+    border: none;
+}
+
+.cbu .copyMsj{
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .bton-cbu{
+    background-color: #fae6e6;
+    height: 50px;
+    border:none;
+    border: 1px solid #d8bfd8;
+    border-radius: 8px;
+  }
+
+  .copy-success {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #19b73e;
+    border: 1px solid #d1d1e0;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+  }
+  
