@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import PageGracias from './componentes/PageGracias'
 import Home from './componentes/Home'
@@ -12,14 +12,14 @@ function App() {
   const wrapperSelected = (argumento) => setSelected(argumento); 
 
   return (
-    <Router>
+    <HashRouter>
       <Navegacion selected={selected} fselected={wrapperSelected}/>
       <Routes className='container'>
         <Route path="/gracias" element={<PageGracias fselected={wrapperSelected} />} /> {/* Usa element en lugar de component */}
         <Route path="/" element={<ViewportDimensions />} />
         <Route path="/metodo-pago" element={<PageCbu fselected={wrapperSelected}/>} />
       </Routes>
-    </Router>
+    </HashRouter>
   )
 }
 

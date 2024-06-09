@@ -3,7 +3,8 @@ import axios from "axios"
 
 function PageGracias({fselected}) {
   const [data, setData] = useState([]);
-  const endpoint = "http://192.168.0.69:8080/agradecimientos" 
+  //const endpoint = "http://192.168.0.69:8080/agradecimientos" 
+  const endpoint = "https://donacionesapi.onrender.com/agradecimientos"
 
   useEffect(()=>{
     fselected('gracias')

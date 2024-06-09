@@ -4,7 +4,8 @@ import React, { useEffect, useState } from 'react'
 function PageCbu({fselected}) {
   const [codigo, setCodigo] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
-  const endpoint = "http://192.168.0.69:8080/cbu"
+  //const endpoint = "http://192.168.0.69:8080/cbu"
+  const endpoint = "https://donacionesapi.onrender.com/cbu"
   const phoneNumber = '5491124616385'; // Reemplaza con el número de teléfono al que quieres enviar el mensaje
   const message1 = 'Te agradesco de corazon el aporte'
   const message2 = "te quiero pedir la ultima molestia si podes adjuntar el comprobante asi actualizo el contador, muchas gracias"
