@@ -1,11 +1,10 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
 
+import { useEffect, useState } from 'react'
+
+// eslint-disable-next-line react/prop-types
 function PageCbu({fselected}) {
-  const [codigo, setCodigo] = useState('');
+  const codigo = "0000003100095781816087";
   const [copySuccess, setCopySuccess] = useState(false);
-  //const endpoint = "http://192.168.0.69:8080/cbu"
-  const endpoint = "https://donacionesapi.onrender.com/cbu"
   const phoneNumber = '5491124616385'; // Reemplaza con el número de teléfono al que quieres enviar el mensaje
   const message1 = 'Te agradesco de corazon el aporte'
   const message2 = "te quiero pedir la ultima molestia si podes adjuntar el comprobante asi actualizo el contador, muchas gracias"
@@ -22,7 +21,6 @@ function PageCbu({fselected}) {
         await navigator.clipboard.writeText(codigo);
         setCopySuccess(true);
       } else {
-        // Fallback para navegadores que no soportan la API del portapapeles
         const textArea = document.createElement("textarea");
         textArea.value = codigo;
         document.body.appendChild(textArea);
@@ -33,7 +31,7 @@ function PageCbu({fselected}) {
       }
       setTimeout(() => {
         setCopySuccess(false);
-      }, 4000); // Ocultar mensaje después de 4 segundos
+      }, 4000); 
     } catch (err) {
       console.error('Error al copiar el CBU: ', err);
     }
@@ -41,8 +39,6 @@ function PageCbu({fselected}) {
 
 	useEffect(()=>{
     fselected('metodo-pago')
-		axios.get(endpoint)
-			.then(response => setCodigo(response.data[0].codigo)); 
 		},[]);
 
   return (
