@@ -5,7 +5,6 @@ import Home from './componentes/Home'
 import Navegacion from './componentes/Navegacion'
 import PageCbu from './componentes/PageCbu';
 import { useState } from 'react';
-import ViewportDimensions from './componentes/ViewportDimensions';
 
 function App() {
   const [selected, setSelected] = useState(null)
@@ -15,8 +14,8 @@ function App() {
     <HashRouter>
       <Navegacion selected={selected} fselected={wrapperSelected}/>
       <Routes className='container'>
+        <Route path="/" element={<Home fselected={wrapperSelected}/>} />
         <Route path="/gracias" element={<PageGracias fselected={wrapperSelected} />} /> {/* Usa element en lugar de component */}
-        <Route path="/" element={<ViewportDimensions />} />
         <Route path="/metodo-pago" element={<PageCbu fselected={wrapperSelected}/>} />
       </Routes>
     </HashRouter>
