@@ -4,7 +4,12 @@ import axios from "axios"
 function PageGracias({fselected}) {
   const [data, setData] = useState([]);
   //const endpoint = "http://192.168.0.69:8080/agradecimientos" 
-  const endpoint = "https://donacionesapi.onrender.com/agradecimientos"
+  const endpoint = "https://masacr3.pythonanywhere.com/usuarios"
+
+  const capitalizeFirstLetter = (text) => {
+    if (!text) return '';
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  };
 
   useEffect(()=>{
     fselected('gracias')
@@ -22,7 +27,7 @@ function PageGracias({fselected}) {
         {data && 
           data.map((item,i) =>
             <li key={i} className='lora'>
-              {item.nombre}
+              {capitalizeFirstLetter(item.nombre)}
             </li>
           )
         }
