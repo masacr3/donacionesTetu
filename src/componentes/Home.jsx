@@ -1,4 +1,4 @@
-import Tetu1 from '../images/tetu2.png'
+import Tetu1 from '../images/tetu1.png'
 import { useEffect } from 'react';
 
 function Home({fselected}) {
@@ -8,13 +8,12 @@ function Home({fselected}) {
 	},[]);
 
   return (
-    <div className='card'>
-      <h2 className='gvr'>Hola mi nombre es Tetu</h2>
+    <div className='card no-margin'>
       <img className="img" src={Tetu1} alt="" />
-      <p className='lora'>
+      <h2 className='gvr presentacion-tetu'>Hola soy Tetu</h2>
+      <p className='lora mensaje-tetu'>
        Nesesito tu ayuda para poder operarme 
       </p>
-      <p className='lora'>En los botones de abajo tenes toda la info</p>
     </div>
   )
 }

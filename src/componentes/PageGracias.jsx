@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 
+// eslint-disable-next-line react/prop-types
 function PageGracias({fselected}) {
   const [data, setData] = useState([]);
-  //const endpoint = "http://192.168.0.69:8080/agradecimientos" 
+  //const endpoint = "http://192.168.0.9:5000/usuarios" 
   const endpoint = "https://masacr3.pythonanywhere.com/usuarios"
 
   const capitalizeFirstLetter = (text) => {
@@ -27,7 +28,7 @@ function PageGracias({fselected}) {
         {data && 
           data.map((item,i) =>
             <li key={i} className='lora'>
-              {capitalizeFirstLetter(item.nombre)}
+              ❤️ {capitalizeFirstLetter(item.nombre)} 
             </li>
           )
         }
