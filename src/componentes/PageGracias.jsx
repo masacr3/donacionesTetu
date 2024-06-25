@@ -19,7 +19,7 @@ function PageGracias({fselected}) {
         setData([...response.data]);
         console.log(response.data);
       })
-      },[fselected]);
+      },[]);
 
   return (
     <div className='card'>

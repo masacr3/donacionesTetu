@@ -58,7 +58,9 @@ function PageCbu({fselected}) {
           Se copió el CBU al portapapeles exitosamente.
         </div>
       )}
-      <p>Si ya transferiste avisame !</p>
+      <p className='centrar-texto'>Si ya transferiste avisame ! <br/>
+        haciendo click <br/> en el <strong>boton</strong> notificar transferencia
+      </p>
       <button className='bton-cbu' onClick={handleWhatsAppClick}>Notificar transferencia!</button>
     </div>
   );

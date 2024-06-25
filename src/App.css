@@ -4,7 +4,6 @@
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Standard */
   }
-  
 
 .card{
     display: flex;
@@ -68,6 +67,42 @@
     height:70vh;
     align-items: center;
     justify-content: center;
+}
+
+.container-secrets{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.secrets{
+    margin: 0;
+    height:50vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.secrets-input{
+  box-sizing: border-box;
+  margin-left: 10px;
+  border-radius: 16px;
+  width: 200px;
+  height: 30px;
+  border: none;
+  padding-left: 20px;
+}
+
+.secrets-bton{
+  background-color: #9f668f;
+  color: #d8bfd8;
+  border: none;
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 4px;
 }
 
 .box.cbu{
@@ -137,6 +172,10 @@
 
 
 /* fuentes */
+
+.centrar-texto{
+  text-align: center;
+}
 
 .le-2{
     letter-spacing: 2px;
