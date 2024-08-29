@@ -30,6 +30,8 @@ const Navegacion  = ({selected, fselected}) => {
   };
 
   return (
+    <div className='fixed'>
+
     <div className="menu">
       <div
         className={`menu-item ${selected === 'home' ? 'selected' : ''}`}
@@ -58,6 +60,7 @@ const Navegacion  = ({selected, fselected}) => {
       >
         <img src={graciasIcon} alt="gracias" />
       </div>
+    </div>
     </div>
   );
 };

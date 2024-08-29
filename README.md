@@ -1,3 +1,3 @@
 # React 
 
-No esta optimizado para LAPTOP Y PC.. solo se diseño para celulares
+El diseño de la pagina esta implementado para celulares
